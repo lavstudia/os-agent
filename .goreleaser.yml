@@ -1,3 +1,6 @@
+env_files:
+  github_token: ../tokens/github_token
+
 before:
   hooks:
     - go mod tidy
