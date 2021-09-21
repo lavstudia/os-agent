@@ -48,8 +48,8 @@ nfpms:
     contents:
       - src: contrib/saos-agent.service
         dst: /usr/lib/systemd/system/saos-agent.service
-      - src: contrib/org.saserver.conf
-        dst: /etc/dbus-1/system.d/org.saserver.conf
+      - src: contrib/org.sas.conf
+        dst: /etc/dbus-1/system.d/org.sas.conf
     scripts:
       postinstall: contrib/debian/postinstall.sh
       preremove: contrib/debian/preremove.sh

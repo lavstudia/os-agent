@@ -13,8 +13,8 @@ import (
 )
 
 const (
-	objectPath        = "/org/saserver/os/AppArmor"
-	ifaceName         = "org.saserver.os.AppArmor"
+	objectPath        = "/org/sas/os/AppArmor"
+	ifaceName         = "org.sas.os.AppArmor"
 	appArmorParserCmd = "apparmor_parser"
 )
 

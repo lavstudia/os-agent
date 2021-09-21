@@ -22,5 +22,5 @@ go build -ldflags "-X main.version="
 ### Тесты
 
 ```shell
-gdbus introspect --system --dest org.saserver.os --object-path /org/saserver/os
+gdbus introspect --system --dest org.sas.os --object-path /org/sas/os
 ```

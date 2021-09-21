@@ -16,8 +16,8 @@ import (
 )
 
 const (
-	objectPath             = "/org/saserver/os/System"
-	ifaceName              = "org.saserver.os.System"
+	objectPath             = "/org/sas/os/System"
+	ifaceName              = "org.sas.os.System"
 	labelDataFileSystem    = "sasos-data"
 	labelOverlayFileSystem = "sasos-overlay"
 	kernelCommandLine      = "/mnt/boot/cmdline.txt"

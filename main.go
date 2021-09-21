@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	busName    = "org.saserver.os"
-	objectPath = "/org/saserver/os"
+	busName    = "org.sas.os"
+	objectPath = "/org/sas/os"
 )
 
 var (
@@ -33,7 +33,7 @@ func main() {
 		logging.Critical.Fatalf("DBus connection: %s", err)
 	}
 
-	// Init Dbus org.saserver.os
+	// Init Dbus org.sas.os
 	reply, err := conn.RequestName(busName, dbus.NameFlagDoNotQueue)
 	if err != nil {
 		logging.Critical.Panic(err)

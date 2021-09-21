@@ -5,7 +5,7 @@ Requires=dbus.socket udisks2.service
 After=dbus.socket
 
 [Service]
-BusName=org.saserver.os
+BusName=org.sas.os
 Type=notify
 Restart=always
 RestartSec=5s

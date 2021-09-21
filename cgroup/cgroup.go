@@ -14,8 +14,8 @@ import (
 )
 
 const (
-	objectPath            = "/org/saserver/os/CGroup"
-	ifaceName             = "org.saserver.os.CGroup"
+	objectPath            = "/org/sas/os/CGroup"
+	ifaceName             = "org.sas.os.CGroup"
 	cgroupFSDockerDevices = "/sys/fs/cgroup/devices/docker"
 )
 
