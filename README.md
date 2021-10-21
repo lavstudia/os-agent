@@ -13,6 +13,25 @@
 
 ## Разработка
 
+# Admin PowerShell
+```shell
+go tool dist install -v pkg/runtime
+go install -v -a std
+```
+# PowerShell
+```shell
+$Env:GOOS = "linux"; $Env:GOARCH = "amd64"
+go build -ldflags="-s -w" -o "sa_amd64"
+$Env:GOOS = "linux"; $Env:GOARCH = "386"
+go build -ldflags="-s -w" -o "sa_i386"
+$Env:GOOS = "linux"; $Env:GOARCH = "arm64"
+go build -ldflags="-s -w" -o "sa_aarch64"
+$Env:GOOS = "linux"; $Env:GOARM = "6"; $Env:GOARCH = "arm"
+go build -ldflags="-s -w" -o "sa_armhf"
+$Env:GOOS = "linux"; $Env:GOARM = "7"; $Env:GOARCH = "arm"
+go build -ldflags="-s -w" -o "sa_armv7"
+```
+
 ### Компиляция
 
 ```shell
