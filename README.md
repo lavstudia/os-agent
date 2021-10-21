@@ -13,12 +13,12 @@
 
 ## Разработка
 
-# Admin PowerShell
+### Admin PowerShell
 ```shell
 go tool dist install -v pkg/runtime
 go install -v -a std
 ```
-# PowerShell
+### PowerShell
 ```shell
 $Env:GOOS = "linux"; $Env:GOARCH = "amd64"
 go build -ldflags="-s -w" -o "sa_amd64"
