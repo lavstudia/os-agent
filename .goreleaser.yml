@@ -1,6 +1,3 @@
-env_files:
-  github_token: ../tokens/github_token
-
 before:
   hooks:
     - go mod tidy
@@ -12,6 +9,7 @@ builds:
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
+      - -X main.board=Supervised
     goos:
       - linux
     goarch:

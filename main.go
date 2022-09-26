@@ -1,12 +1,15 @@
 package main
 
 import (
+	"time"
+
 	"github.com/coreos/go-systemd/v22/daemon"
 	"github.com/godbus/dbus/v5"
 	"github.com/godbus/dbus/v5/introspect"
 	"github.com/godbus/dbus/v5/prop"
 
 	"github.com/lavstudia/os-agent/apparmor"
+	"github.com/lavstudia/os-agent/boards"
 	"github.com/lavstudia/os-agent/cgroup"
 	"github.com/lavstudia/os-agent/datadisk"
 	"github.com/lavstudia/os-agent/system"
@@ -22,6 +25,7 @@ const (
 var (
 	version       string = "dev"
 	enableCapture bool   = false
+	board         string = "unknown"
 )
 
 func main() {
@@ -50,6 +54,7 @@ func main() {
 	system.InitializeDBus(conn)
 	apparmor.InitializeDBus(conn)
 	cgroup.InitializeDBus(conn)
+	boards.InitializeDBus(conn, board)
 
 	_, err = daemon.SdNotify(false, daemon.SdNotifyReady)
 	if err != nil {

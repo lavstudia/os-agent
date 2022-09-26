@@ -100,7 +100,7 @@ func InitializeDBus(conn *dbus.Conn) {
 	}
 
 	d := datadisk{
-		conn:        conn,
+		conn: conn,
 	}
 
 	propsSpec := map[string]map[string]*prop.Prop{
