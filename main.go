@@ -1,8 +1,6 @@
 package main
 
 import (
-	"time"
-
 	"github.com/coreos/go-systemd/v22/daemon"
 	"github.com/godbus/dbus/v5"
 	"github.com/godbus/dbus/v5/introspect"
